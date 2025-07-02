@@ -1,72 +1,87 @@
+/* Style for the background video */
 video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
+    object-fit: cover;      /* Ensures the video covers the entire element without distortion */
+    width: 100%;            /* Full width of the viewport */
+    height: 100%;           /* Full height of the viewport */
+    position: fixed;        /* Fixes the video to the screen background */
+    z-index: -1;            /* Places the video behind all other content */
 }
 
+/* Container for the hero section content */
 .hero-container {
-    background: url('/public/images/img-home.jpg') center center/cover no-repeat;
-    height: 100vh;
-    width: 100%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
+    background: url('/public/images/img-home.jpg') center center/cover no-repeat; 
+    /* Fallback background image if video doesn't load */
+
+    height: 100vh;          /* Full viewport height */
+    width: 100%;            /* Full width */
+    display: flex;          /* Flexbox layout */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;/* Center content vertically */
+    align-items: center;    /* Center content horizontally */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); /* Dark overlay for text contrast */
+    object-fit: contain;    /* Ensure the container maintains aspect ratio */
 }
 
+/* Main heading inside the hero section */
 .hero-container > h1 {
     color: #fff;
-    font-size: 100px;
-    margin-top: -100px;
+    font-size: 100px;       /* Very large heading */
+    margin-top: -100px;     /* Pull the heading up for better placement */
 }
 
+/* Subheading/paragraph under the hero title */
 .hero-container > p {
     margin-top: 8px;
     color: #fff;
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucia Sans Unicode', 'Lucida Grande', 
-        'Lucida Sans', Arial, sans-serif; 
+        'Lucida Sans', Arial, sans-serif; /* Clean, modern font stack */
 }
 
+/* Button container inside hero */
 .hero-btns {
     margin-top: 32px;
 }
 
+/* Spacing between buttons (if styled using class `.hero-btn`) */
 .hero-btn .btn {
     margin: 6px;
 }
 
+/* Play icon in "Watch Trailer" button */
 .fa-play-circle {
     margin-left: 4px;
 }
 
+/* --------------------------- */
+/* Responsive styles for tablets and phones */
+/* --------------------------- */
+
+/* Medium screens: tablets and small laptops */
 @media screen and (max-width: 960px) {
     .hero-container > h1 {
-        font-size: 70px;
-        margin-top: -150px;
+        font-size: 70px;         /* Smaller heading */
+        margin-top: -150px;      /* Adjust spacing for tighter layout */
     }
 }
 
+/* Smaller screens: phones and compact tablets */
 @media screen and (max-width: 768px) {
     .hero-container > h1 {
-        font-size: 50px;
-        margin-top: -100px;
+        font-size: 50px;         /* Even smaller heading for mobile */
+        margin-top: -100px;      /* Adjust vertical placement */
     }
 
     .hero-container > p {
-        font-size: 30px
+        font-size: 30px;         /* Slightly smaller paragraph text */
     }
 
     .btn-mobile {
-        display: block;
-        text-decoration: none;
+        display: block;          /* Ensure mobile buttons stack properly */
+        text-decoration: none;   /* Remove underline */
     }
 
     .btn {
-        width: 100;
+        width: 100%;              /* Make buttons take full width on mobile screens */
     }
 }

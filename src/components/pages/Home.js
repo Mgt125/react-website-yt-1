@@ -4,6 +4,7 @@ import React from 'react';
 import '../../App.css';
 // Import the HeroSection component used on the homepage
 import HeroSection from '../HeroSection';
+import Cards from '../Cards';
 
 // Define the Home component
 function Home() {
@@ -11,6 +12,8 @@ function Home() {
     <>
       {/* Render the HeroSection as the main content of the Home page */}
       <HeroSection />
+
+      <Cards />
     </>
   );
 }

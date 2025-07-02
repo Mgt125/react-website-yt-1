@@ -1,41 +1,48 @@
+/* Define CSS custom properties (variables) */
 :root {
-    --primary: #fff;
+    --primary: #fff; /* Primary color used across buttons (white) */
 }
 
+/* Base button styles applied to all buttons */
 .btn {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    padding: 8px 20px;         /* Padding inside the button for spacing */
+    border-radius: 2px;        /* Slightly rounded corners */
+    outline: none;             /* Remove default focus outline */
+    border: none;              /* Remove default border */
+    cursor: pointer;           /* Pointer cursor on hover */
 }
 
+/* Primary button style */
 .btn--primary {
-    background-color: var(--primary);
-    color: #242424;
-    border: 1px solid var(--primary);
+    background-color: var(--primary);  /* Use the primary color (white) */
+    color: #242424;                    /* Dark text color for contrast */
+    border: 1px solid var(--primary); /* Border using primary color */
 }
 
-.btn--outline{
-    background-color: transparent;
-    color: #fff;
-    padding: 8px 20px;
-    border: 1px solid var(--primary);
-    transition: all 0.3s ease-out;
+/* Outline button style */
+.btn--outline {
+    background-color: transparent;       /* Transparent background */
+    color: #fff;                         /* White text */
+    padding: 8px 20px;                   /* Padding consistent with base button */
+    border: 1px solid var(--primary);    /* White border */
+    transition: all 0.3s ease-out;       /* Smooth transition for hover effects */
 }
 
+/* Medium sized button adjustments */
 .btn-medium {
-    padding: 8px 20px;
-    font-size: 20px;
+    padding: 8px 20px;       /* Padding for medium size */
+    font-size: 20px;         /* Font size for medium button */
 }
 
+/* Large sized button adjustments */
 .btn-large {
-    padding: 12px 26px;
-    font-size:20px;
+    padding: 12px 26px;      /* Larger padding for bigger buttons */
+    font-size: 20px;         /* Font size remains consistent with medium */
 }
 
+/* Hover effect for medium and large buttons */
 .btn--medium:hover, .btn--large:hover {
-    background: #fff;
-    color: #242424;
-    transition: all 0.3s ease-out;
+    background: #fff;        /* Background changes to white on hover */
+    color: #242424;          /* Text color changes to dark for contrast */
+    transition: all 0.3s ease-out;  /* Smooth transition on hover */
 }

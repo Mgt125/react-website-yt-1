@@ -41,7 +41,7 @@ function Navbar() {
       <div className='navbar-container'>
         {/* Logo that navigates to the home page and closes mobile menu when clicked */}
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          TRVL <i className='fab fa-typo3' />
+          TREK <i className='fab fa-typo3' />
         </Link>    
 
         {/* Menu icon that toggles between open (X) and closed (hamburger) */}

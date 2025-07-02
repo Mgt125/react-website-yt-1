@@ -1,54 +1,61 @@
+/* Main navbar styling */
 .navbar {
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
+  background: linear-gradient(90deg, rgb(0, 56, 9) 0%, rgb(100, 107, 2) 100%); /* Dark horizontal gradient background */
+  height: 80px;                              /* Set fixed navbar height */
+  display: flex;                             /* Use flexbox for layout */
+  justify-content: center;                   /* Center content horizontally */
+  align-items: center;                       /* Center content vertically */
+  font-size: 1.2rem;                         /* Default font size for nav */
+  position: sticky;                          /* Sticks navbar to top when scrolling */
   top: 0;
-  z-index: 999;
+  z-index: 999;                              /* Ensure navbar stays on top */
 }
 
+/* Container inside navbar for layout control */
 .navbar-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
-  max-width: 1500px;
+  max-width: 1500px;                         /* Limit maximum width */
 }
 
+/* Logo styling */
 .navbar-logo {
   color: #fff;
-  justify-self: start;
+  justify-self: start;                       /* Align logo to the start (left) */
   margin-left: 20px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
+  cursor: pointer;                           /* Cursor changes to pointer on hover */
+  text-decoration: none;                     /* Remove underline */
+  font-size: 2rem;                           /* Large font size */
   display: flex;
   align-items: center;
 }
 
+/* Icon next to the logo */
 .fa-typo3 {
   margin-left: 0.5rem;
   font-size: 1.8rem;
 }
 
+/* Main nav menu using grid layout */
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(4, auto);    /* Four equally spaced items */
   grid-gap: 10px;
-  list-style: none;
+  list-style: none;                          /* Remove default bullet points */
   text-align: center;
   width: 60vw;
-  justify-content: end;
+  justify-content: end;                      /* Align items to the right */
   margin-right: 2rem;
 }
 
+/* Each nav item */
 .nav-item {
   height: 80px;
 }
 
+/* Nav links styling */
 .nav-links {
   color: #fff;
   display: flex;
@@ -58,28 +65,37 @@
   height: 100%;
 }
 
+/* Hover effect for nav links */
 .nav-links:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
 
+/* Menu icon color (hamburger or close icon) */
 .fa-bars {
   color: #fff;
 }
 
+/* Mobile-only nav link (hidden by default) */
 .nav-links-mobile {
   display: none;
 }
 
+/* Hamburger menu icon (hidden by default) */
 .menu-icon {
   display: none;
 }
 
+/* --------------------------- */
+/* Responsive Styles (Mobile) */
+/* --------------------------- */
 @media screen and (max-width: 960px) {
+  /* Container for mobile nav menu */
   .NavbarItems {
     position: relative;
   }
 
+  /* Nav menu becomes a vertical drawer */
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -87,19 +103,21 @@
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: -100%;
+    left: -100%;                            /* Hide off-screen initially */
     opacity: 1;
     transition: all 0.5s ease;
   }
 
+  /* When menu is active (clicked open) */
   .nav-menu.active {
     background: #242222;
-    left: 0;
+    left: 0;                                /* Slide into view */
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
 
+  /* Mobile nav links inside the vertical menu */
   .nav-links {
     text-align: center;
     padding: 2rem;
@@ -107,12 +125,14 @@
     display: table;
   }
 
+  /* Hover effect for mobile nav links */
   .nav-links:hover {
     background-color: #fff;
     color: #242424;
     border-radius: 0;
   }
 
+  /* Logo repositioning for mobile layout */
   .navbar-logo {
     position: absolute;
     top: 0;
@@ -120,6 +140,7 @@
     transform: translate(25%, 50%);
   }
 
+  /* Display the hamburger or close icon */
   .menu-icon {
     display: block;
     position: absolute;
@@ -130,11 +151,13 @@
     cursor: pointer;
   }
 
+  /* Close icon styling */
   .fa-times {
     color: #fff;
     font-size: 2rem;
   }
 
+  /* "Sign Up" mobile button/link */
   .nav-links-mobile {
     display: block;
     text-align: center;
@@ -150,6 +173,7 @@
     transition: all 0.3s ease-out;
   }
 
+  /* Hover effect for mobile sign-up button */
   .nav-links-mobile:hover {
     background: #fff;
     color: #242424;
