@@ -1,16 +1,28 @@
+// Import core React library
 import React from 'react';
-import'../App.css';
+// Import global styles
+import '../App.css';
+// Import custom Button component
 import { Button } from './Button';
+// Import specific styles for the HeroSection
 import './HeroSection.css';
 
-
 function HeroSection() {
-    return(
+    return (
+        // Main container for the hero section
         <div className='hero-container'>
-            <video src="videos/video-2.mp4" autopPlay loop muted />
+            {/* Background video that plays automatically, loops, and is muted */}
+            <video src="videos/video-2.mp4" autoPlay loop muted />
+
+            {/* Main heading text */}
             <h1>ADVENTURE AWAITS</h1>
+
+            {/* Subheading text */}
             <p>What are you waiting for?</p>
+
+            {/* Container for the call-to-action buttons */}
             <div className='hero-btns'>
+                {/* "Get Started" button with outlined style and large size */}
                 <Button
                     className='btns'
                     buttonStyle='btn--outline'
@@ -18,6 +30,8 @@ function HeroSection() {
                 >
                     GET STARTED
                 </Button>
+
+                {/* "Watch Trailer" button with primary style and large size, includes play icon */}
                 <Button
                     className='btns'
                     buttonStyle='btn--primary'
@@ -27,7 +41,8 @@ function HeroSection() {
                 </Button>
             </div>
         </div>
-    )
+    );
 }
 
-export default HeroSection
+// Export the component to be used in other parts of the app
+export default HeroSection;

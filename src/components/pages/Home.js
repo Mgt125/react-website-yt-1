@@ -1,13 +1,19 @@
+// Import the core React library
 import React from 'react';
+// Import global styles
 import '../../App.css';
+// Import the HeroSection component used on the homepage
 import HeroSection from '../HeroSection';
 
+// Define the Home component
 function Home() {
-  return(
+  return (
     <>
-        <HeroSection />
+      {/* Render the HeroSection as the main content of the Home page */}
+      <HeroSection />
     </>
-  )
+  );
 }
 
+// Export the Home component so it can be used in routing
 export default Home;
