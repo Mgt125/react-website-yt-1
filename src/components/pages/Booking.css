@@ -1,67 +1,94 @@
+/* Booking.css */
+
+/* Main container for the booking page */
 .booking-container {
-  padding: 2rem;
-  background-color: #fff;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* Header styling */
 .booking-container h1 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  color: #333;
 }
 
+/* Label styling */
 form label {
   display: block;
+  margin-bottom: 1.2rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Input and select fields */
+form input,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+/* Focus styles for input/select fields */
+form input:focus,
+form select:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+/* Submit button styling */
+button[type='submit'] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 1.5rem;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type='submit']:hover {
+  background-color: #2c3e90;
+}
+
+/* Optional: Styling for time slot grid if you show availability later */
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-form select,
-form input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #242424;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.time-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 12px;
-  margin: 1rem 0;
-}
-
 .time-slot {
-  padding: 10px 0;
-  border: 1px solid #242424;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #242424;
+  padding: 10px;
+  background-color: #e3e3e3;
+  border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .time-slot:hover {
-  background-color: #242424;
-  color: #fff;
+  background-color: #d1d1d1;
+  transform: scale(1.03);
 }
 
 .time-slot.selected {
-  background-color: #242424;
-  color: #fff;
+  background-color: #3f51b5;
+  color: white;
   font-weight: bold;
 }
-

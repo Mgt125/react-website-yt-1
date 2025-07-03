@@ -1,24 +1,70 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Booking.css';
 
 function Booking() {
+  // Booking state
   const [gameType, setGameType] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [duration, setDuration] = useState('60');
 
+  // User info state
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+
+  // Form submission handler
   const handleSubmit = (e) => {
     e.preventDefault();
-    const bookingDetails = { gameType, date, time, duration };
+    const bookingDetails = {
+      firstName,
+      lastName,
+      email,
+      gameType,
+      date,
+      time,
+      duration,
+    };
     console.log('Booking submitted:', bookingDetails);
     // TODO: Send to backend via POST request
   };
-
 
   return (
     <div className='booking-container'>
       <h1>Book Your Game Session</h1>
       <form onSubmit={handleSubmit}>
+        {/* User Information */}
+        <label>
+          First Name:
+          <input
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </label>
+
+        <label>
+          Last Name:
+          <input
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </label>
+
+        <label>
+          Email:
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </label>
+
+        {/* Booking Details */}
         <label>
           Game Type:
           <select value={gameType} onChange={(e) => setGameType(e.target.value)} required>
