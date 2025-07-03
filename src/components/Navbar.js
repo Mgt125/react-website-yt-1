@@ -41,7 +41,7 @@ function Navbar() {
       <div className='navbar-container'>
         {/* Logo that navigates to the home page and closes mobile menu when clicked */}
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          TREK <i className='fab fa-typo3' />
+          GameRoom <i className='fab fa-typo3' />
         </Link>    
 
         {/* Menu icon that toggles between open (X) and closed (hamburger) */}
@@ -58,7 +58,10 @@ function Navbar() {
             <Link to='/services' className='nav-links' onClick={closeMobileMenu}>Services</Link>
           </li>
           <li className='nav-item'>
-            <Link to='/products' className='nav-links' onClick={closeMobileMenu}>Products</Link>
+            <Link to='/games' className='nav-links' onClick={closeMobileMenu}>Games</Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/booking' className='nav-links' onClick={closeMobileMenu}>Book</Link>
           </li>
           <li className='nav-item'>
             {/* This link only appears in the mobile view */}

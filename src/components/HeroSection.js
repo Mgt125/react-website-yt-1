@@ -6,6 +6,7 @@ import '../App.css';
 import { Button } from './Button';
 // Import specific styles for the HeroSection
 import './HeroSection.css';
+import { Link } from 'react-router-dom';
 
 function HeroSection() {
     return (
@@ -28,7 +29,7 @@ function HeroSection() {
                     buttonStyle='btn--outline'
                     buttonSize='btn--large'
                 >
-                    GET STARTED
+                    <Link to='/booking' style={{ color: 'white', textDecoration: 'none' }}>BOOK A GAME</Link>
                 </Button>
 
                 {/* "Watch Trailer" button with primary style and large size, includes play icon */}

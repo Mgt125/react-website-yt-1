@@ -1,66 +1,58 @@
-// Import React library to use JSX and create components
 import React from 'react';
-// Import the CardItem component which renders individual card content
 import CardItem from './CardItem';
-// Import the CSS styling for the Cards component
 import './Cards.css';
 
-// Define a functional component called Cards
 function Cards() {
   return (
-    // Main container for all card content
     <div className='cards'>
-        {/* Heading text for the section */}
-        <h1>Check out these EPIC Destinations!</h1>
+      {/* Section title */}
+      <h1>Explore Our Gaming Experiences</h1>
 
-        {/* Outer container for layout structure */}
-        <div className="cards__container">
-            {/* Inner wrapper to control layout and responsiveness */}
-            <div className="cards__wrapper">
+      {/* Container for all card items */}
+      <div className="cards__container">
+        <div className="cards__wrapper">
 
-                {/* First row of card items */}
-                <ul className="cards__items">
-                    {/* Each CardItem represents a single destination card with props */}
-                    <CardItem 
-                        src="images/img-9.jpg" 
-                        text="Explore the hidden waterfall inside the amazon jungle"
-                        label='Adventure'
-                        path='/services'
-                    />
-                    <CardItem 
-                        src="images/img-2.jpg" 
-                        text="Travel through the island of Bali in a private cruise"
-                        label='Luxury'
-                        path='/services'
-                    />
-                </ul>
+          {/* First row of cards */}
+          <ul className="cards__items">
+            <CardItem 
+              src="images/VR-img.jpg"
+              text="Step into fully immersive worlds with cutting-edge VR gaming. Explore, fight, and play in 360° freedom."
+              label="VR Gaming"
+              path="/booking"
+            />
+            <CardItem 
+              src="images/Esports-img.jpg"
+              text="Sharpen your skills or battle friends in high-stakes esports titles. Competitive setups for serious players."
+              label="Esports"
+              path="/booking"
+            />
+          </ul>
 
-                {/* Second row of card items */}
-                <ul className="cards__items">
-                    <CardItem 
-                        src="images/img-3.jpg" 
-                        text="Set sail in the Atlantic Ocean's uncharted waters"
-                        label='Mystery'
-                        path='/services'
-                    />
-                    <CardItem 
-                        src="images/img-4.jpg" 
-                        text="Experience football on top of mountains"
-                        label='Adventure'
-                        path='/services'
-                    />
-                    <CardItem 
-                        src="images/img-8.jpg" 
-                        text="Ride through the Sahara Desert on a camel tour"
-                        label='Adventure'
-                        path='/services'
-                    />
-                </ul>
-            </div>
+          {/* Second row of cards */}
+          <ul className="cards__items">
+            <CardItem 
+              src="images/Party-img.jpg"
+              text="Bring the crew. Perfect for couch co-op, chaotic multiplayer, and instant fun with friends."
+              label="Party Games"
+              path="/booking"
+            />
+            <CardItem 
+              src="images/Solo-img.jpg"
+              text="Need some game time to yourself? Play your favorite titles in peace with our solo mode sessions."
+              label="Solo Play"
+              path="/booking"
+            />
+            <CardItem 
+              src="images/Board-img.jpg"
+              text="Unplug and play. Enjoy classic and modern board games — perfect for groups and casual hangouts."
+              label="Board Games"
+              path="/booking"
+            />
+          </ul>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-// Export the Cards component to be used in other parts of the app
 export default Cards;

@@ -9,7 +9,7 @@
 /* Common styles for all page sections: home, services, products, sign-up */
 .home,
 .services,
-.products,
+.games,
 .sign-up {
   display: flex;               /* Use Flexbox layout */
   height: 90vh;                /* Set height to 90% of the viewport height */
@@ -20,7 +20,7 @@
 
 /* Styles specific to the "services" section */
 .services {
-  background-image: url('/public/images/img-2.jpg'); /* Set background image */
+  background-image: url('/public/images/Services-img.jpg'); /* Set background image */
   background-position: center;                      /* Center the image */
   background-size: cover;                           /* Cover the entire section */
   background-repeat: no-repeat;                     /* Prevent the image from repeating */
@@ -29,18 +29,18 @@
 }
 
 /* Styles specific to the "products" section */
-.products {
-  background-image: url('/public/images/img-1.jpg'); /* Set background image */
+.games {
+  background-image: url('/public/images/games.jpeg'); /* Set background image */
   background-position: center;                       /* Center the image */
-  background-size: fill;                             /* Incorrect value — should be `cover` or `contain` */
+  background-size: cover;                             /* Incorrect value — should be `cover` or `contain` */
   background-repeat: no-repeat;                      /* Prevent the image from repeating */
   color: #fff;                                       /* White text */
   font-size: 100px;                                  /* Very large text */
+  backdrop-filter: blur(8px);
 }
 
 /* Styles specific to the "sign-up" section */
 .sign-up {
-  background-image: url('/public/images/img-8.jpg'); /* Set background image */
   background-position: center;                       /* Center the image */
   background-size: cover;                            /* Cover the entire section */
   background-repeat: no-repeat;                      /* Prevent the image from repeating */

@@ -1,6 +1,6 @@
 /* Main navbar styling */
 .navbar {
-  background: linear-gradient(90deg, rgb(0, 56, 9) 0%, rgb(100, 107, 2) 100%); /* Dark horizontal gradient background */
+  background: linear-gradient(90deg, rgb(93, 2, 240) 0%, rgb(148, 138, 0) 100%); /* Dark horizontal gradient background */
   height: 80px;                              /* Set fixed navbar height */
   display: flex;                             /* Use flexbox for layout */
   justify-content: center;                   /* Center content horizontally */
@@ -41,7 +41,7 @@
 /* Main nav menu using grid layout */
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);    /* Four equally spaced items */
+  grid-template-columns: repeat(5, auto);    /* Four equally spaced items */
   grid-gap: 10px;
   list-style: none;                          /* Remove default bullet points */
   text-align: center;

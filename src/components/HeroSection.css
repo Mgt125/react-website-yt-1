@@ -9,7 +9,7 @@ video {
 
 /* Container for the hero section content */
 .hero-container {
-    background: url('/public/images/img-home.jpg') center center/cover no-repeat; 
+    background: url('/public/images/Home-img.jpeg') center center/cover no-repeat; 
     /* Fallback background image if video doesn't load */
 
     height: 100vh;          /* Full viewport height */

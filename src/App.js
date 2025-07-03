@@ -10,27 +10,34 @@ import Navbar from './components/Navbar.js';
 // Importing necessary components from react-router-dom for routing
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Importing the Home page component
+// Importing the page components for different routes
 import Home from './components/pages/Home.js';
+import Services from './components/pages/Services.js';
+import Games from './components/pages/Games.js';
+import SignUp from './components/pages/SignUp.js';
+import Booking from './components/pages/Booking';
 
 // Main App component
 function App() {
   return (
     <>
-      {/* Router wraps the app to enable client-side routing */}
+      {/* Wrap the entire app with Router to enable routing */}
       <Router>
-        {/* Navbar component is displayed on all pages */}
+        {/* Navbar will be visible on all pages */}
         <Navbar />
-        
-        {/* Define the different routes/pages of the app */}
+
+        {/* Define app routes for different pages */}
         <Routes>
-          {/* Route for the home page ('/') */}
           <Route exact path='/' element={<Home />} />
+          <Route path='/services' element={<Services />} />
+          <Route path='/games' element={<Games />} />
+          <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/booking' element={<Booking />} />
         </Routes>
       </Router>
     </>
   );
 }
 
-// Export the App component so it can be used in index.js
+// Export the App component to be rendered in index.js
 export default App;
