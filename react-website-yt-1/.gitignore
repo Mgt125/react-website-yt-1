@@ -9,3 +9,4 @@ server/__pycache__/
 *.db
 .env
 node_modules
+ 
