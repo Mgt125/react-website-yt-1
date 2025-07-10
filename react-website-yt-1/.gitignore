@@ -2,11 +2,4 @@
 client/node_modules/
 client/build/
 
-# Python / Flask
-server/venv/
-server/__pycache__/
-*.pyc
-*.db
-.env
-node_modules
- 
+/server/
