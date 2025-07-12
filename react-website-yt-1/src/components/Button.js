@@ -27,7 +27,7 @@ export const Button = ({
 
   return (
     // Wrap button in a Link to make it navigate to the Sign Up page when clicked
-    <Link to='/sign-up' className='btn-mobile'>
+    <Link to='/booking' className='btn-mobile'>
       <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`} // Combine base class with validated style and size
         onClick={onClick}  // Attach the click handler

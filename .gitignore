@@ -1,12 +1,21 @@
-# Node / React
-client/node_modules/
-client/build/
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
 
-# Python / Flask
-server/venv/
-server/__pycache__/
-*.pyc
-*.db
+# Visual Studio
+.vs/
+*.vc.db
+*.vscode/
+
+# React/Node
+node_modules/
+build/
 .env
-node_modules
- 
+
+# System
+.DS_Store
+Thumbs.db
